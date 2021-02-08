@@ -13,32 +13,31 @@ yargs.command('*', false, (yargs: any) => {
     yargs
         .option('endpoint', {
             alias: 'e',
-            description: "Your AWS IoT custom endpoint, not including a port. "  +
-              "Ex: \"abcd123456wxyz-ats.iot.us-east-1.amazonaws.com\"",
+            description: "a269y8yihw1shl-ats.iot.eu-central-1.amazonaws.com. ",
             type: 'string',
             required: true
         })
         .option('ca_file', {
             alias: 'r',
-            description: 'FILE: path to a Root CA certficate file in PEM format.',
+            description: 'C:\Users\corbetta.marco\Desktop\certs\CA-root.pem',
             type: 'string',
             required: false
         })
         .option('cert', {
             alias: 'c',
-            description: 'FILE: path to a PEM encoded certificate to use with mTLS',
+            description: 'C:\Users\corbetta.marco\Desktop\certs\primary-certificate.pem',
             type: 'string',
             required: false
         })
         .option('key', {
             alias: 'k',
-            description: 'FILE: Path to a PEM encoded private key that matches cert.',
+            description: 'C:\Users\corbetta.marco\Desktop\certs\private_key.key',
             type: 'string',
             required: false
         })
         .option('client_id', {
             alias: 'C',
-            description: 'Client ID for MQTT connection.',
+            description: 'a269y8yihw1shl-ats.iot.eu-central-1.amazonaws.com',
             type: 'string',
             required: false
         })
@@ -51,8 +50,7 @@ yargs.command('*', false, (yargs: any) => {
         .option('count', {
             alias: 'n',
             default: 10,
-            description: 'Number of messages to publish/receive before exiting. ' +
-            'Specify 0 to run forever.',
+            description: '10 ' ,
             type: 'number',
             required: false
         })
@@ -90,7 +88,7 @@ yargs.command('*', false, (yargs: any) => {
             alias: 'M',
             description: 'Message to publish.',
             type: 'string',
-            default: 'Hello world!'
+            default: 'Ciao mondo!'
         })
         .option('verbosity', {
             alias: 'v',
